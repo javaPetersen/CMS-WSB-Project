@@ -1,0 +1,16 @@
+version: '3'
+services:
+  cms-db:
+    image: mongo:7.0.6
+    container_name: cms-db
+#    restart: always
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${CMD_DB_USERNAME:-superuser}
+      MONGO_INITDB_ROOT_PASSWORD: ${CMD_DB_PASSWORD:-superpassword123}
+    volumes:
+      - cms-data:/var/lib/cms/data
+
+volumes:
+  cms-data:
