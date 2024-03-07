@@ -55,8 +55,8 @@ TBD
 - domyślny username: ```superuser```
 - domyślny password: ```superpassword123```
 - Możemy sobie nadpisać domyślne passy poprzez ustawienie zmiennych środowiskowych o nazwach:
-- ```CMD_DB_USERNAME```
-- ```CMD_DB_PASSWORD```
+> CMD_DB_USERNAME \
+> CMD_DB_PASSWORD
 - Wtedy docker automatycznie je wykryje i użyje w bazie danych
 
 
@@ -69,3 +69,40 @@ z listy rozwijanej możemy wybrać ```DataSource``` i na liście znaleźć ```Mo
 
 Na ekranie wypełniamy dane: host, port, username, password i klikamy Test Connection. (może pojawić się komunikat o braku Drivera do bazy danych, nalezy go pobrać)
 Jeśli otrzymamy komunikat że połączenie udane, klikamy Apply, OK i możemy po prawej stronie wybrać odpowiednią schemę i ją podejrzeć.
+
+
+# PRACA Z GITEM
+
+Naszym głównym branchem rozwojowym jest ```develop``` i to do niego merdżujemy wszystkie zmiany.
+Klonując repozytorium zaczniemy prace na tym branchu.
+
+Pracując nad nową funkcjonalnością powinniśmy odbijać nowy branch od developa:
+
+> git checkout -b ***nazwa_brancha***
+
+nazwa brancha powinna w mniejszym lub większym stopniu opisywać daną funkcjonalność.
+Takie odbicie brancha tworzy nam kopie developa na osobnej gałęzi. Jeżeli chcemy sprawdzić czy na pewno się przełączyliśmy możemy
+użyć komendy:
+
+> git branch
+
+Która pokaże nam wszystkie nasze branche i wskaże który jest aktywny.
+
+Gdy kończymy nasze prace nad funkcjonalnością musimy pamiętać, żeby scommitować nasze zmiany. By śledzić
+zmiany możemy użyć pluginu z naszego IDE, które znajduje się po lewej stronie ekranu.
+
+![intellij-git.png](docs-images%2Fintellij-git.png)
+
+Zaznaczamy pliki które chcemy scommitować, w polu message wpisujemy opis naszych zmian. Klikamy commit and push.
+Gdy zpushujemy zmiany do repo, musimy przejsc na strone github i odpalić Pull Request.
+Aby można było zmerdżować Pull Request musimy mieć review i approve od jednej osoby, jeśli Reviewer zatwierdzi nasze zmiany, to możemy kliknąć Merge Pull Request.
+
+Po zmerdżowaniu zmian w naszym IDE przepinamy się na brancha develop.
+
+> git checkout develop
+
+a następnie ściągamy najnowsze zmiany
+
+> git pull
+
+Gdy mamy aktualnego developa. Odbijamy kolejnego brancha i kodujemy nowy feature ;)
