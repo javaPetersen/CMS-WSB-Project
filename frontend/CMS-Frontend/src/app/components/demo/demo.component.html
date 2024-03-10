@@ -1,0 +1,20 @@
+<div>DEMODEMO</div>
+
+<div *ngFor="let singleData of data">
+  <div [ngSwitch]="singleData.componentId">
+    <div *ngSwitchCase="'imageGallery'">
+      <img alt="none" [src]="singleData.src" [style]="singleData.style">
+    </div>
+    <div *ngSwitchCase="'title'">
+      <h2>{{singleData.content}}</h2>
+    </div>
+    <div *ngSwitchCase="'description'">
+      <span>{{singleData.content}}</span>
+      <textarea></textarea>
+    </div>
+
+  </div>
+
+
+</div>
+

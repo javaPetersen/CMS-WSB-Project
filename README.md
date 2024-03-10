@@ -29,8 +29,8 @@ https://www.mongodb.com/docs/manual/introduction/
 ## Backend (Python Django)
 TODO
 
-## Frontend (Angular?)
-TBD
+## Frontend (Angular)
+Nasz frontend będzie tworzony w Angularze. Więcej informacji w README.md w folderze frontend/cms-frontend.
 
 
 # Stawianie środowiska lokalnego
