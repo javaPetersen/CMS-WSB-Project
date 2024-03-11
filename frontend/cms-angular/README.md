@@ -13,6 +13,12 @@ npm i
 Pierwsza komenda nakazuje korzystanie z wersji 18.13.0 (jeżeli 18.13.0 jest naszą jedyną wersją lub ustawioną na default, to możemy pominąć ten krok).
 Druga komenda instaluje moduły, może to chwile zająć.
 
+## INSTALACJA ANGULARA
+Na sam koniec musimy zainstalować Angular
+```
+npm install -g @angular/cli
+```
+
 ## URUCHOMIENIE APKI
 Gdy mamy zainstalowane modules, możemy przystąpić do uruchomienia naszej aplikacji.
 Możemy zrobić na kilka sposobów:
