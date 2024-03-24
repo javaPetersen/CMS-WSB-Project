@@ -1,0 +1,34 @@
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+  <div class="flex-container">
+
+    <div class="login-box">
+
+      <div class="login-header pacifico-title">Login</div>
+
+
+      <div class="form-data">
+        <div class="input-with-label">
+          <label for="username">USERNAME</label>
+          <input id="username" name="username" placeholder="Type your username" formControlName="username" [ngClass]="{'invalid': this.isControlInvalid('username')}">
+            @for (error of formControlErrors; track error) {
+              @if (error.field === 'username') {
+                <span class="error-message">* {{ error.message }}</span>
+              }
+            }
+        </div>
+        <div class="input-with-label">
+          <label for="password">PASSWORD</label>
+          <input id="password" name="password" type="password" placeholder="Type your password" formControlName="password" [ngClass]="{'invalid': this.isControlInvalid('password')}">
+          @for (error of formControlErrors; track error) {
+            @if (error.field === 'password') {
+              <span class="error-message">* {{ error.message }}</span>
+            }
+          }
+        </div>
+      </div>
+
+      <button type="submit">LOGIN</button>
+    </div>
+
+  </div>
+</form>

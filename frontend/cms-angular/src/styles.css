@@ -1,1 +1,62 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Tauri&display=swap');
+
+
+:root {
+  --grey-color: #464646;
+  --error-color: #eb2632;
+  --light-red-color: #ff6f69;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+body, input, button {
+  font-weight: 400;
+  font-size: 1.2rem;
+  font-family: "Tauri", sans-serif;
+  color: var(--grey-color);
+}
+
+label {
+  font-size: 1rem;
+}
+
+input, input:focus-visible {
+  width: 100%;
+  padding: 0.5rem 0;
+  border: 0;
+  outline: 0;
+  border-bottom: 0.1rem var(--grey-color) solid;
+}
+
+input.invalid::placeholder {
+  color: var(--light-red-color);
+}
+
+input.invalid {
+  padding: 0.5rem 0;
+  border-bottom: 0.1rem var(--error-color) solid;
+}
+
+button {
+  height: 3rem;
+  border-radius: 3rem;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  background: linear-gradient(60deg, var(--grey-color) 0%, #093579 100%);
+  border: 0.1rem var(--grey-color) solid;
+}
+
+.pacifico-title {
+  font-weight: 800;
+  font-size: 3rem;
+  font-family: "Pacifico", sans-serif;
+  letter-spacing: 0.05rem;
+}
+
+
